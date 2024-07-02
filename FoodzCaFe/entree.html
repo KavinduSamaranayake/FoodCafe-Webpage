@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FooDzCaFe | Entree</title>
+
+
+    <!--================ Internal Css start ===================-->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .headerbar {
+            display: none;
+        }
+
+        .searchicon {
+            display: block;
+
+        }
+
+        .logo img {
+            width: 120px;
+            height: 100px;
+        }
+
+        .bar {
+            display: none;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 7vw;
+            background-color: rgb(248, 232, 217);
+            border-bottom: 2px solid rgb(252, 196, 124);
+
+        }
+
+        .header ul {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .header ul li:hover {
+            color: rgb(253, 57, 8);
+
+        }
+
+        .nav ul li {
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .account {
+            float: 0.1
+        }
+
+        .account ul {
+            display: flex;
+            justify-content: end;
+        }
+
+        .account ul li {
+            padding: 0 15px;
+            font-size: 18px;
+        }
+
+        .bar i:hover {
+            color: rgb(253, 57, 8);
+        }
+
+        .search {
+            display: none;
+            width: 200px;
+            justify-content: center;
+        }
+
+        .search input {
+            width: 100%;
+            outline: none;
+            border: none;
+
+            padding: 5px;
+        }
+
+        .srchicon {
+            background-color: rgb(255, 210, 210);
+            display: block;
+            padding: 4px 5px;
+            cursor: pointer;
+        }
+
+
+
+        /*Start css Body */
+
+
+        legend {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgb(210, 116, 0);
+            margin-left: 40px;
+            padding: 7px 15px;
+            border-radius: 20px;
+
+
+
+        }
+
+
+
+
+
+        fieldset {
+            margin: 36px;
+            background-color: #c8c8c8;
+            border: 1px;
+            border-radius: 25px;
+            padding-bottom: 20px;
+        }
+
+
+
+        body {
+            background-color: rgb(248, 232, 217);
+        }
+
+        /*Out frame container*/
+        .container {
+            margin: 0px 15px 0 15px;
+            text-align: center;
+        }
+
+        h1 span {
+            color: rgb(141, 86, 18);
+        }
+
+
+        /*Animation part in PRESHOOTS*/
+        h1 {
+            color: rgb(19, 13, 13);
+            font-weight: normal;
+            font-size: 35px;
+            position: relative;
+            margin: 30px 0 10px 0;
+            text-align: center;
+        }
+
+        h1::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: rgb(210, 116, 0);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: animate 4s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                width: 100px;
+            }
+
+            50% {
+                width: 200px;
+            }
+
+            100% {
+                width: 100px;
+            }
+        }
+
+        /*Card's images */
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+            height: 270px;
+            object-fit: cover;
+            padding-left: px;
+            margin-bottom: 10px;
+        }
+
+        /*Card*/
+        .card {
+            /* Change background color */
+            background-color: rgb(201, 159, 125);
+
+            /* Add border */
+            border: 0px solid rgb(196, 195, 195);
+
+            /* Add space between the border and the content */
+            padding: 20px;
+
+            border-radius: 16px;
+            width: 300px;
+            height: 540px;
+            margin: 15px 12px 20px 12px;
+            display: inline-block;
+            box-sizing: border-box;
+            cursor: pointer;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            box-shadow: 5px 10px 12px 0px rgb(126, 80, 42);
+            transition: 400ms;
+
+
+
+        }
+
+        .card:hover {
+
+            transform: scale(1.04);
+        }
+
+        .card_details {
+            /* Add space around the details */
+            padding: 15px 8px 20px 8px;
+            background-color: #a3a6aa;
+            border-radius: 12px;
+
+        }
+
+        /*Name Of the couple*/
+        .name {
+            font-size: 24px;
+            font-weight: 600;
+            background-color: #bc8300;
+
+            border-radius: 11px;
+            border: 0px solid rgb(101, 55, 55);
+            margin-bottom: 10px;
+        }
+
+        .cardpara {
+            margin-top: 5px;
+            padding: 7px;
+            background-color: #e0cdcd;
+            border-radius: 20px;
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+        .price {
+            padding: 5px;
+            margin: 0px 80px 15px 80px;
+            border: 1px solid #f75e06;
+            background-color: #ff9e9e;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #090400;
+
+
+        }
+
+        .btn1 {
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+
+            float: left;
+            font-weight: bold;
+            color: rgb(68, 63, 61);
+            border: 1px solid rgb(57, 57, 57);
+            background-color: white;
+            box-shadow: 0 2px 15px rgb(66, 66, 66);
+            transition: all 0.2s;
+
+            /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
+            margin: 0 auto;
+            display: block;
+
+            /* Button is a clickable element, therefore it should have a pointer cursor */
+            cursor: pointer;
+            margin-bottom: 5px;
+
+        }
+
+        .btn2 {
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+
+            float: right;
+            font-weight: bold;
+            color: rgb(68, 63, 61);
+            border: 1px solid rgb(57, 57, 57);
+            background-color: white;
+            box-shadow: 0 2px 15px rgb(66, 66, 66);
+            transition: all 0.2s;
+
+            /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
+            margin: 0 auto;
+            display: block;
+
+            /* Button is a clickable element, therefore it should have a pointer cursor */
+            cursor: pointer;
+
+        }
+
+        .btn1:hover {
+            color: white;
+            background-color: rgb(253, 77, 8);
+            border: 1px solid rgb(253, 77, 8);
+            box-shadow: 0 10px 15px rgb(250, 120, 69);
+        }
+
+        /*button 2*/
+        .btn2:hover {
+            color: white;
+            background-color: rgb(145, 41, 0);
+            box-shadow: 0 10px 15px rgb(173, 73, 33);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header">
+
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="nav">
+                    <ul>
+                        <a href="">
+                            <li>Home</li>
+                        </a>
+                        <a href="">
+                            <li>About us</li>
+                        </a>
+                        <a href="">
+                            <li>Food Menu</li>
+                        </a>
+
+                        <a href="">
+                            <li>Contact us</li>
+                        </a>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Entree/official logo3.png" alt="">
+                </a>
+
+            </div>
+
+            <div class="bar">
+                <i class=" fa-solid fa-bars "> </i>
+                <i class="  fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="about.html">
+                        <li>About us</li>
+                    </a>
+                    <a href="food_menu.html">
+                        <li>Food Menu</li>
+                    </a>
+
+                    <a href="contact.html">
+                        <li>Contact us</li>
+                    </a>
+                    <a href="review.html">
+                        <li>Reviews</li>
+                    </a>
+
+                </ul>
+            </div>
+
+            <div class="account">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                        </li>
+                    </a>
+
+                    <div class="search" id="searchinput2">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-user" id="user-lap"></i>
+                        </li>
+                    </a>
+                </ul>
+
+            </div>
+
+        </div>
+    </header>
+
+    <fieldset>
+        <legend> Foods</legend>
+
+        <div class="container">
+            <h1><span>Entree</span> Foods</h1>
+            <br>
+
+            <!--*******================First Card card============****** -->
+
+            <div class="card">
+                <!-- A div with image of the card -->
+                <img src="images/Entree/en1.jpg" alt="">
+
+                <div class="card__details">
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Thai food</div>
+
+                    <!-- A div with discibe the food of the card -->
+                    <p class="cardpara">thai food; tom yum kung or river <br>prawn spicy soup.
+
+                    </p>
+
+                    <div class="price">$9.25</div>
+
+                    <div class="bt">
+                        <button class="btn1">Buy</button>
+                        <button class="btn2">Add to card</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <!--*******================Second Card card============****** -->
+
+            <div class="card">
+                <!-- A div with image of the card -->
+                <img src="images/Entree/en2.jpg" alt="">
+
+                <div class="card__details">
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Steak</div>
+
+                    <!-- A div with discibe the food of the card -->
+                    <p class="cardpara">Steak with potatoes and vegetables <br>on wooden board
+                    </p>
+
+                    <div class="price">$10.50</div>
+
+                    <div class="bt">
+                        <button class="btn1">Buy</button>
+                        <button class="btn2">Add to card</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <!--*******================Third Card card============****** -->
+
+            <div class="card">
+                <!-- A div with image of the card -->
+                <img src="images/Entree/en3.jpg" alt="">
+
+                <div class="card__details">
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Seafood plate</div>
+
+                    <!-- A div with discibe the food of the card -->
+                    <p class="cardpara">seafood plate with shrimps, mussels, lobsters served with lemon and glass of
+                        beer
+                    </p>
+
+                    <div class="price">$13.25</div>
+
+                    <div class="bt">
+                        <button class="btn1">Buy</button>
+                        <button class="btn2">Add to card</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <!--*******================ Fourth Card card ============****** -->
+            <div class="card">
+                <!-- A div with image of the card -->
+                <img src="images/Entree/en4.jpg" alt="">
+
+                <div class="card__details">
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Roasted Pork</div>
+
+                    <!-- A div with discibe the food of the card -->
+                    <p class="cardpara">This classic roast pork recipe with lots of delicious crackling is great for
+                        Sunday lunch
+                    </p>
+
+                    <div class="price">$10.00</div>
+
+                    <div class="bt">
+                        <button class="btn1">Buy</button>
+                        <button class="btn2">Add to card</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <br>
+            <!--*******================ five Card card ============****** -->
+            <div class="card">
+                <!-- A div with image of the card -->
+                <img src="images/Entree/en5.jpg" alt="">
+
+                <div class="card__details">
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Lasagne</div>
+
+                    <!-- A div with discibe the food of the card -->
+                    <p class="cardpara">Everyone loves a lasagna. It's a great way to feed a crowd and a
+                        perfect dish.
+                    </p>
+
+                    <div class="price">$8.50</div>
+
+                    <div class="bt">
+                        <button class="btn1">Buy</button>
+                        <button class="btn2">Add to card</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--*******================ six Card card ============****** -->
+            <div class="card">
+                <!-- A div with image of the card -->
+                <img src="images/Entree/en6.jpg" alt="">
+
+                <div class="card__details">
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Spagheti</div>
+
+                    <!-- A div with discibe the food of the card -->
+                    <p class="cardpara">spaghetti bolognese is super easy and a true Italian classic with a meaty,
+                        chilli sauce.
+                    </p>
+
+                    <div class="price">$9.75</div>
+
+                    <div class="bt">
+                        <button class="btn1">Buy</button>
+                        <button class="btn2">Add to card</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--*******================ seven Card card ============****** -->
+            <div class="card">
+                <!-- A div with image of the card -->
+                <img src="images/Entree/eb7.png" alt="">
+
+                <div class="card__details">
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Chicken Biriyani</div>
+
+                    <!-- A div with discibe the food of the card -->
+                    <p class="cardpara"> made with Indian spices, vegetables, rice, and usually some type of meat.
+                    </p>
+
+                    <div class="price">$8.75</div>
+
+                    <div class="bt">
+                        <button class="btn1">Buy</button>
+                        <button class="btn2">Add to card</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--*******================Eight Card card============****** -->
+            <div class="card">
+                <!-- A div with image of the card -->
+                <img src="images/Entree/en8.jpg" alt="">
+
+                <div class="card__details">
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Devilled Beef</div>
+
+                    <!-- A div with discibe the food of the card -->
+                    <p class="cardpara">"Devilled Beef is a fusion between oriental & western cooking.
+                    </p>
+
+                    <div class="price">$10.00</div>
+
+                    <div class="bt">
+                        <button class="btn1">Buy</button>
+                        <button class="btn2">Add to card</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</body>
+
+</html>

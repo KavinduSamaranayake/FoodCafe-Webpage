@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="shortcut icon" href="images/logo1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FooDzCaFe | Contact Us </title>
+
+
+    <!--============================CSS Internal==========================-->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .headerbar {
+            display: none;
+        }
+
+        .searchicon {
+            display: block;
+
+        }
+
+        .logo img {
+            width: 120px;
+            height: 100px;
+        }
+
+        .bar {
+            display: none;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 7vw;
+            background-color: rgb(248, 232, 217);
+            border-bottom: 2px solid rgb(252, 196, 124);
+
+        }
+
+        .header ul {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .header ul li:hover {
+            color: rgb(253, 57, 8);
+
+        }
+
+        .nav ul li {
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .account {
+            float: 0.1
+        }
+
+        .account ul {
+            display: flex;
+            justify-content: end;
+        }
+
+        .account ul li {
+            padding: 0 15px;
+            font-size: 18px;
+        }
+
+        .bar i:hover {
+            color: rgb(253, 57, 8);
+        }
+
+        .search {
+            display: none;
+            width: 200px;
+            justify-content: center;
+        }
+
+        .search input {
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .srchicon {
+            background-color: rgb(255, 210, 210);
+            display: block;
+            padding: 4px 5px;
+            cursor: pointer;
+        }
+
+        /*====Start Contact  Form=======*/
+
+        body,
+        input,
+        textarea {
+            font-family: 'poppins', sans-serif;
+
+        }
+
+        body {
+            background-color: rgb(248, 232, 217);
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 490px;
+            min-height: 100vh;
+            padding: 2rem;
+            margin-bottom: 50px;
+            margin-top: 15px;
+
+
+            display: flex;
+            padding-top: 30px;
+            justify-content: center;
+
+
+        }
+
+        .form {
+            width: 100%;
+            max-width: 1000px;
+
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            box-shadow: 0px 10px 15px 5px rgb(76, 76, 76);
+        }
+
+
+
+
+        .contact-form {
+            background-color: rgb(92, 92, 92);
+
+            /*#1abc9c*/
+
+            position: relative;
+            background-repeat: no-repeat;
+        }
+
+
+
+        .circle {
+
+            border-radius: 50%;
+            background: linear-gradient(135deg, transparent 20%, #422222);
+            /*#149279*/
+            position: absolute;
+        }
+
+        .circle.one {
+            width: 130px;
+            height: 130px;
+            top: 130x;
+            bottom: 250px;
+            right: -40px;
+        }
+
+        .circle.two {
+            width: 80px;
+            height: 80px;
+            top: 100x;
+            right: 30px;
+        }
+
+        .contact-form:before {
+            content: "";
+            position: absolute;
+            width: 26px;
+            height: 23px;
+            background-color: red;
+            transform: rotate(45deg);
+            top: 50px;
+            left: -15px;
+            background-color: rgb(69, 36, 18);
+            /* #1abc9c*/
+        }
+
+        .contact-form {
+            padding: 2.3rem 2.8rem;
+            z-index: 10;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            background: url(images/contact/bg6.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            opacity: 1;
+
+
+
+
+        }
+
+        .title {
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 1;
+            margin-bottom: 1.2rem;
+            padding-bottom: 5px;
+        }
+
+        .input-container {
+            position: relative;
+            margin: 2.1rem 0;
+        }
+
+
+
+        .input {
+            width: 100%;
+            outline: none;
+            border: 2px solid rgb(238, 238, 238);
+            /*#fafaff*/
+            background: none;
+            padding: 0.6rem 1.2rem;
+            color: #fff;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        textarea.input {
+            padding: 0.8rem 1.2rem;
+            min-height: 200px;
+            border-radius: 22px;
+            resize: none;
+            overflow-y: auto;
+        }
+
+        .input-container label {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            padding: 0 0.4rem;
+            color: #fafafa;
+            font-size: 0.9rem;
+            font-weight: 400;
+            pointer-events: none;
+            z-index: 1000;
+            transition: 0.5s;
+        }
+
+        .input-container.textarea label {
+            top: 1rem;
+            transform: translateY(0);
+        }
+
+        .btn {
+            padding: 0.7rem 1.7rem;
+            background-color: rgb(215, 127, 11);
+            border: 1px solid rgb(215, 127, 11);
+            box-shadow: 0 10px 10px rgba(250, 120, 69, 0.484);
+            font-size: 1.12rem;
+            font-weight: bold;
+            color: aliceblue;
+            /*#1abc9c*/
+            line-height: 1;
+            border-radius: 25px;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin: 1px;
+        }
+
+        .btn:hover {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(250, 241, 69, 0.677);
+            border: 1px solid rgb(253, 77, 8);
+            color: rgb(253, 77, 8);
+        }
+
+        .input-container span {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+            padding: 0 0.4rem;
+            color: transparent;
+            pointer-events: none;
+            z-index: 500;
+
+
+        }
+
+        .input-container span:before,
+        .input-container span:after {
+            content: "";
+            position: absolute;
+            width: 10%;
+            opacity: 0;
+            transition: 0.3s;
+            height: 5px;
+            background-color: rgb(34, 32, 32);
+            top: 30%;
+            transform: translateY(50%);
+        }
+
+        .input-container span:before {
+            left: 50%;
+
+        }
+
+        .input-container span::after {
+            right: 50%;
+        }
+
+        .input-container.focus label {
+            top: 0;
+            transform: translateY(-50%);
+            left: 25px;
+            font-size: 0.8rem;
+        }
+
+        .input-container.focus span:before,
+        .input-container.focus span:after {
+            width: 50%;
+            opacity: 1;
+        }
+
+
+        /*======Contact Info======*/
+
+
+        .contact-info {
+            padding: 2.3rem 2.2rem;
+            position: relative;
+            background-color: #c8c8c8;
+        }
+
+        .contact-info .title {
+            color: rgb(165, 55, 0);
+            padding-bottom: 20px;
+
+        }
+
+        .text {
+            color: #3b2626;
+            margin: 1.5rem 0 2rem 0;
+        }
+
+        .infomation {
+
+            display: flex;
+            color: #555;
+            margin: 0.7rem 0;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .icon {
+            width: 20px;
+            margin-right: 0.7rem;
+
+        }
+
+        .social-media {
+            padding: 2rem 0 0 0;
+        }
+
+        .social-media p {
+            color: #2c2c2c;
+        }
+
+        .social-icons {
+            display: flex;
+            margin-top: 1rem;
+
+        }
+
+        .social-icons a {
+            width: 35px;
+            height: 35px;
+            border-radius: 5px;
+            background: linear-gradient(45deg, rgb(153, 52, 1), rgb(198, 84, 26));
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 0.5rem;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.15);
+            background-color: antiquewhite;
+
+            box-shadow: 0 5px 10px rgb(173, 73, 33);
+        }
+
+        .contact-info::before {
+            content: "";
+            position: absolute;
+            width: 110px;
+            height: 100px;
+            border: 22px solid rgb(171, 121, 124);
+            border-radius: 50%;
+            bottom: -77px;
+            right: 50px;
+            opacity: 0.3;
+
+        }
+
+
+        .map {
+            padding-top: 0px;
+
+
+        }
+
+        iframe {
+            border-radius: 10px;
+            border: 1px solid black;
+
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 300px;
+
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(300px);
+            }
+
+            to {
+                transform: translateX(0);
+
+            }
+
+        }
+
+        .container {
+            animation: slideInRight 0.31s ease-in 0s 1 normal none;
+        }
+
+        .container2 {
+            max-width: 1170px;
+
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+
+        .footer {
+            background-color: #35302d;
+            padding: 70px 0;
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            font-weight: 500;
+            position: relative;
+
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: rgb(253, 77, 8);
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-left: 10px;
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        .copy p {
+            color: #ffffff;
+
+
+
+        }
+
+        .copy {
+            width: 100%;
+            margin-top: 30px;
+            background-color: #322813;
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <header>
+
+        <div class="header">
+
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="nav">
+                    <ul>
+                        <a href="">
+                            <li>Home</li>
+                        </a>
+                        <a href="#">
+                            <li>About Us</li>
+                        </a>
+                        <a href="">
+                            <li>Food Menu</li>
+                        </a>
+
+                        <a href="#">
+                            <li>Contact Us</li>
+                        </a>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/contact/official logo3.png" alt="">
+                </a>
+
+            </div>
+
+            <div class="bar">
+                <i class=" fa-solid fa-bars "> </i>
+                <i class="  fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="about.html">
+                        <li>About us </li>
+                    </a>
+                    <a href="food_menu.html">
+                        <li>Food Menu</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Contact us</li>
+                    </a>
+                    <a href="review.html">
+                        <li>Reviews</li>
+                    </a>
+
+                </ul>
+            </div>
+
+            <div class="account">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                        </li>
+                    </a>
+
+                    <div class="search" id="searchinput2">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-user" id="user-lap"></i>
+                        </li>
+                    </a>
+                </ul>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <span class="big-circle"></span>
+        <div class="form">
+
+            <!--==Contact Info==-->
+            <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p></p>
+
+                <div class="info">
+                    <div class="infomation">
+                        <img src="images/contact/gps1.png" class="icon" alt="">
+                        <p>22 Eheliyagoda,Getahetta</p>
+                    </div>
+                    <div class="infomation">
+                        <img src="images/contact/mail.png" class="icon" alt="">
+                        <p>food@cafe.gmail.com</p>
+                    </div>
+                    <div class="infomation">
+                        <img src="images/contact/tele.png" class="icon" alt="">
+                        <p>+9477-0735-368</p>
+                    </div>
+                </div>
+
+
+                <div class="social-media">
+                    <p>Connect with us :</p>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <br><br>
+
+                <!--==========Map=======-->
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31690.23893531314!2d80.24477975122078!3d6.857021267150037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3af8b532ab8bd%3A0x374fc03d3afa85d3!2sEheliyagoda!5e0!3m2!1sen!2slk!4v1688124014721!5m2!1sen!2slk"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </div>
+
+            <!--<div class="contact-map"></div>-->
+
+
+
+            <!--==Contact Form==-->
+            <div class="contact-form">
+
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+
+                <form action="contact.html">
+
+                    <h3 class="title">Contact us</h3>
+                    <div class="input-container">
+                        <input type="text" name="name" class="input">
+                        <label for="">UserName</label>
+                        <span>UserName</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" class="input">
+                        <label for="">Email</label>
+                        <span>Email</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="tel" name="phone" class="input">
+                        <label for="">Phone</label>
+                        <span>Phone</span>
+                    </div>
+                    <div class="input-container textarea ">
+                        <textarea name="message" class="input"></textarea>
+                        <label for="">Message</label>
+                        <span>Massege</span>
+                    </div>
+                    <input type="submit" value="Send" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affliate programme</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Online shop</h4>
+                    <ul>
+                        <li><a href="#">appetizer</a></li>
+                        <li><a href="#">Entree</a></li>
+                        <li><a href="#">desserts</a></li>
+                        <li><a href="#">beverages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <br>
+                <div class="copy">
+                    <p>Copyright &copy 2023 FooDzCaFe All Rights Reserved</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+    <!--==============Java script============-->
+
+    <script>
+        const inputs = document.querySelectorAll(".input");
+
+        function focusFunc() {
+            let parent = this.parentNode;
+            parent.classList.add("focus");
+        }
+        function blurFunc() {
+            let parent = this.parentNode;
+            if (this.value == "") {
+                parent.classList.remove("focus");
+            }
+        }
+
+        inputs.forEach(input => {
+            input.addEventListener("focus", focusFunc);
+            input.addEventListener("blur", blurFunc);
+        })
+
+    </script>
+
+
+</body>
+
+</html>

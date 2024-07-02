@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="shortcut icon" href="images/logo1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FooDzCaFe | Login </title>
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .headerbar {
+            display: none;
+        }
+
+        .searchicon {
+            display: block;
+
+        }
+
+        .logo img {
+            width: 120px;
+            height: 100px;
+        }
+
+        .bar {
+            display: none;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 7vw;
+            background-color: rgb(248, 232, 217);
+            border-bottom: 2px solid rgb(252, 196, 124);
+
+        }
+
+        .header ul {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .header ul li:hover {
+            color: rgb(253, 57, 8);
+
+        }
+
+        .nav ul li {
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .account {
+            float: 0.1
+        }
+
+        .account ul {
+            display: flex;
+            justify-content: end;
+        }
+
+        .account ul li {
+            padding: 0 15px;
+            font-size: 18px;
+        }
+
+        .bar i:hover {
+            color: rgb(253, 57, 8);
+        }
+
+        .search {
+            display: none;
+            width: 200px;
+            justify-content: center;
+        }
+
+        .search input {
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .srchicon {
+            background-color: rgb(255, 210, 210);
+            display: block;
+            padding: 4px 5px;
+            cursor: pointer;
+        }
+
+        body {
+            background-image: url('images/login/bg7.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            display: block;
+            background-image:
+                linear-gradient(to bottom, rgba(112, 111, 111, 0.159), rgba(138, 105, 130, 0)),
+                url('');
+            backdrop-filter: blur(9px);
+
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .wrapper {
+            position: absolute;
+            width: 400px;
+            height: 440px;
+            background: transparent;
+            border: 0px solid rgb(219, 106, 62);
+            border-radius: 20px;
+            backdrop-filter: blur(50px);
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .5);
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: height .2s ease;
+
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*transform: scale(0);*/
+            overflow: hidden;
+
+
+        }
+
+        .wrapper.active-popup {
+            /* transform: scale(1);*/
+        }
+
+        .wrapper.active {
+            height: 520px;
+        }
+
+        .wrapper .form-box {
+            width: 100%;
+            padding: 40px;
+
+        }
+
+
+        .wrapper .form-box.login {
+            /*display: none;*/
+        }
+
+        .wrapper.active .form-box.login {
+            transition: none;
+            transform: translateX(-400px);
+        }
+
+        .wrapper .form-box.register {
+            position: absolute;
+            transition: none;
+            transform: translateX(400px);
+        }
+
+        .wrapper.active .form-box.register {
+            transition: transform .18s ease;
+            transform: translateX(0);
+        }
+
+        .wrapper .icon-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45px;
+            height: 45px;
+            background: rgb(235, 121, 75);
+            font-size: 2em;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom-left-radius: 20px;
+            cursor: pointer;
+            z-index: 1;
+
+        }
+
+        .form-box h2 {
+            font-size: 2em;
+            color: antiquewhite;
+            text-align: center;
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid rgb(215, 67, 8);
+            margin: 30px 0;
+
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: rgb(7, 2, 62);
+            font-weight: 500;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .input-box input:focus~label,
+        .input-box input:valid~label {
+            top: -5px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: rgb(52, 45, 45);
+            font-weight: 600;
+            padding: 0 35px 0 5px;
+
+
+        }
+
+        .input-box .icon {
+            position: absolute;
+            right: 8px;
+            font-size: 1.2em;
+            color: aqua;
+            line-height: 57px;
+        }
+
+        .remember-fogot {
+            font-size: .9em;
+            color: brown;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .remember-fogot label input {
+            accent-color: rgb(255, 0, 0);
+            margin-right: 3px;
+        }
+
+        .remember-fogot a {
+            color: rgb(89, 86, 86);
+
+        }
+
+        .remember-fogot a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            height: 45px;
+            background: rgb(197, 61, 7);
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            color: white;
+            font-weight: 500;
+        }
+
+        .login-register {
+            font-size: .9em;
+            color: bisque;
+            text-align: center;
+            font-weight: 500;
+            margin: 25px 0 10px;
+        }
+
+        .login-register p a {
+            color: rgb(89, 86, 86);
+            font-weight: 600;
+        }
+
+        .login-register p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <header>
+
+        <div class="header">
+
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="nav">
+                    <ul>
+                        <a href="">
+                            <li>Home</li>
+                        </a>
+                        <a href="#">
+                            <li>About Us</li>
+                        </a>
+                        <a href="">
+                            <li>Food Menu</li>
+                        </a>
+
+                        <a href="#">
+                            <li>Contact Us</li>
+                        </a>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/login/official logo3.png" alt="">
+                </a>
+
+            </div>
+
+            <div class="bar">
+                <i class=" fa-solid fa-bars "> </i>
+                <i class="  fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="about.html">
+                        <li>About us </li>
+                    </a>
+                    <a href="food_menu.html">
+                        <li>Food Menu</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Contact us</li>
+                    </a>
+                    <a href="review.html">
+                        <li>Reviews</li>
+                    </a>
+
+                </ul>
+            </div>
+
+            <div class="account">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                        </li>
+                    </a>
+
+                    <div class="search" id="searchinput2">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-user" id="user-lap"></i>
+                        </li>
+                    </a>
+                </ul>
+
+            </div>
+
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <a href="index.html">
+            <span class="icon-close">
+                <ion-icon name="close"></ion-icon>
+            </span>
+        </a>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-fogot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="">Forgot Password?</a>
+
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>
+                        Don't have an account?
+                        <a href="#" class="register-link"> Register </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!--=======Register form======-->
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="">
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-fogot">
+                    <label><input type="checkbox">I agree to the terms & Conditions</label>
+
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>
+                        Already have an account?
+                        <a href="#" class="login-link"> Login </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <script>
+
+        const wrapper = document.querySelector('.wrapper');
+        const loginLink = document.querySelector('.login-link');
+        const registerLink = document.querySelector('.register-link');
+
+        /*button*/
+        const btnPopup = document.querySelector('.btnLogin-popup'); //red_btn
+        const iconClose = document.querySelector('.icon-close');
+
+
+
+        registerLink.addEventListener('click', () => {
+            wrapper.classList.add('active');
+        });
+
+        loginLink.addEventListener('click', () => {
+            wrapper.classList.remove('active');
+        });
+
+
+
+        /*btn*/
+        btnPopup.addEventListener('click', () => {
+            wrapper.classList.add('active-popup');
+        });
+        iconClose.addEventListener('click', () => {
+            wrapper.classList.remove('active-popup');
+        });
+
+    </script>
+
+</body>
+
+</html>

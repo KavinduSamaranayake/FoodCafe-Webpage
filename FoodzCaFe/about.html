@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FooDzCaFe | About Us</title>
+
+
+
+    <!--================ Internal Css start ===================-->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .headerbar {
+            display: none;
+        }
+
+        .searchicon {
+            display: block;
+
+        }
+
+        .logo img {
+            width: 120px;
+            height: 100px;
+        }
+
+        .bar {
+            display: none;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 7vw;
+            background-color: rgb(248, 232, 217);
+            /* rgb(248, 232, 217) */
+            border-bottom: 2px solid rgb(252, 196, 124);
+            /* rgb(252, 196, 124) */
+            box-shadow: 0 2px 20px rgb(253, 124, 124);
+        }
+
+        .header ul {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .header ul li:hover {
+            color: rgb(253, 57, 8);
+
+        }
+
+        .nav ul li {
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .account {
+            float: 0.1
+        }
+
+        .account ul {
+            display: flex;
+            justify-content: end;
+        }
+
+        .account ul li {
+            padding: 0 15px;
+            font-size: 18px;
+        }
+
+        .bar i:hover {
+            color: rgb(253, 57, 8);
+        }
+
+        .search {
+            display: none;
+            width: 200px;
+            justify-content: center;
+        }
+
+        .search input {
+            width: 100%;
+            outline: none;
+            border: none;
+
+            padding: 5px;
+        }
+
+        .srchicon {
+            background-color: rgb(255, 210, 210);
+            display: block;
+            padding: 4px 5px;
+            cursor: pointer;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .about {
+            background-color: rgb(248, 232, 217);
+            padding: 0 7vw;
+
+        }
+
+        border {
+            border-radius: 10px;
+        }
+
+        .about h1:nth-child(2) {
+            padding-top: 100px;
+            color: #e5eaed;
+
+        }
+
+        .head {
+            padding-right: 30px;
+
+        }
+
+        .details img {
+
+
+            padding-top: 10px;
+            height: 500px;
+            width: 100%;
+
+
+        }
+
+        .details figcaption {
+
+
+            bottom: 0;
+            left: 0;
+            background-color: rgba(59, 32, 0, 0.7);
+            color: #f2e3e3;
+            padding: 20px;
+            width: 100%;
+            font-size: 35px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 35px;
+
+        }
+
+        @keyframes UpInDown {
+            from {
+                transform: translateX(-300px);
+            }
+
+            to {
+                transform: translateX(0);
+
+            }
+
+        }
+
+
+        .head {
+            background-image: linear-gradient(rgba(129, 114, 94, 0.52), rgba(115, 102, 76, 0.566)),
+                url('images/About us/aboutbg3.jpg');
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 5px 9px 25px 4px #333537;
+
+        }
+
+        hr.hr1 {
+            border: 3px solid rgba(96, 58, 0, 0.722);
+            border-radius: 20px;
+        }
+
+        .head pre {
+            color: rgb(255, 255, 255);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            padding-left: -50px;
+
+
+        }
+
+
+        .about h2 {
+            padding: 10px 10px 10px 140px;
+            letter-spacing: 5px;
+            color: #262626;
+
+        }
+
+        .card img {
+            width: 190px;
+            border-radius: 12px;
+            height: 214px;
+            object-fit: cover;
+            padding-left: 20px;
+            margin-bottom: 7px;
+
+        }
+
+
+
+
+
+        .card {
+            /* Change background color */
+            background-color: rgb(230, 230, 230);
+
+            /* Add border */
+            border: 0px solid rgb(255, 133, 84);
+
+            /* Add space between the border and the content */
+            padding: 8px;
+
+            border-radius: 12px;
+            width: 300px;
+            height: 470px;
+            margin: 25px;
+            display: inline-block;
+            box-sizing: border-box;
+            cursor: pointer;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            box-shadow: 5px 25px 17px 2px #333537;
+
+            transition: 400ms;
+
+
+        }
+
+        .card:hover {
+
+            transform: scale(1.05);
+        }
+
+        /* Style div elements that have class equal to tag */
+        .tag {
+
+            padding: 4px 8px;
+            border: 1px solid #959595;
+
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #788697;
+        }
+
+        /* Style div elements that have class equal to name */
+        .name {
+            font-size: 24px;
+            font-weight: 600;
+
+            margin-top: 16px;
+        }
+
+        /* Style p element */
+        .cardpara {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #51555a;
+            line-height: 150%;
+        }
+
+        /* Style button element */
+        .btn {
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+
+
+            font-weight: bold;
+            color: rgb(253, 77, 8);
+            border: 1px solid rgb(253, 77, 8);
+            background-color: white;
+            box-shadow: 0 2px 15px rgb(250, 120, 69);
+            transition: all 0.2s;
+
+            /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
+            margin: 0 auto;
+            display: block;
+
+            /* Button is a clickable element, therefore it should have a pointer cursor */
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: rgb(253, 77, 8);
+            box-shadow: 0 10px 15px rgb(250, 120, 69);
+        }
+
+        .card__details {
+            /* Add space around the details */
+            padding: 16px 8px 8px 8px;
+        }
+
+
+        .container {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-around;
+            padding: 80px 0px;
+
+        }
+
+        .vision {
+
+            background-color: rgb(255, 214, 176);
+            margin: 10px;
+
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .mision {
+            background-color: rgb(255, 214, 176);
+            /*#9a794f8d*/
+            margin: 0px 10px 20px 10px;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+
+
+        .chefs {
+            padding-top: 60px;
+        }
+
+        .chefs span {
+            color: rgb(253, 57, 8);
+        }
+
+        .hr2 {
+            border: 2px solid rgba(254, 148, 49, 0.721);
+            border-radius: 20px;
+        }
+
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-300px);
+            }
+
+            to {
+                transform: translateX(0);
+
+            }
+
+        }
+
+        .mision {
+            animation: slideInLeft 0.34s ease-in 0s 1 normal none;
+        }
+
+        .vision {
+            animation: slideInLeft 0.43s ease-in 0s 1 normal none;
+        }
+
+        .container2 {
+            max-width: 1170px;
+
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+
+        .footer {
+            background-color: #35302d;
+            padding: 70px 0;
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            font-weight: 500;
+            position: relative;
+
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: rgb(253, 77, 8);
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-left: 10px;
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        .copy p {
+            color: #ffffff;
+
+
+
+        }
+
+        .copy {
+            width: 100%;
+            margin-top: 30px;
+            background-color: #322813;
+            text-align: center;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /**media tab start**/
+        @media only screen and (max-width: 768px) {
+
+            .header .nav,
+            .header .account {
+                display: none;
+            }
+
+            .search {
+                width: 60vw;
+
+            }
+
+            .bar {
+                display: block;
+                cursor: pointer;
+
+            }
+
+            .headerbar {
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                bottom: 0;
+                right: -100%;
+                transition: all 0.5s;
+                background-color: rgb(252, 231, 216);
+
+            }
+
+            .headerbar .account,
+            .headerbar .nav {
+                display: block;
+                font-size: 18px;
+
+            }
+
+            .bar .fa-xmark {
+                display: none;
+                top: 20px;
+                right: 5w;
+                position: absolute;
+                font-size: 25px;
+
+            }
+
+            .headerbar .nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .headerbar .nav li {
+                width: 96vw;
+                margin: 10px 0;
+                padding: 15px 30px;
+                box-shadow: 0 2px 15px rgb(252, 193, 169);
+                font-size: 15px;
+                margin-top: 5px;
+
+            }
+
+            .headerbar .account {
+                line-height: 40px;
+                margin-top: 60px;
+                background-color: rgb(252, 210, 182);
+                padding: 15px;
+
+            }
+
+            .headerbar .account ul {
+                justify-content: space-between;
+            }
+        }
+
+        /**Media Tab Close**/
+
+
+        /**Media Mobile Start**/
+
+        /**Media Mobile Start**/
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header">
+
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="nav">
+                    <ul>
+                        <a href="">
+                            <li>Home</li>
+                        </a>
+                        <a href="">
+                            <li>About Us</li>
+                        </a>
+                        <a href="">
+                            <li>Food Menu</li>
+                        </a>
+
+                        <a href="">
+                            <li>Contact Us</li>
+                        </a>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/About us/official logo3.png" alt="">
+                </a>
+
+            </div>
+
+            <div class="bar">
+                <i class=" fa-solid fa-bars "> </i>
+                <i class="  fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="">
+                        <li>About us</li>
+                    </a>
+                    <a href="food_menu.html">
+                        <li>Food Menu</li>
+                    </a>
+
+                    <a href="contact.html">
+                        <li>Contact us</li>
+                    </a>
+                    <a href="review.html">
+                        <li>Reviews</li>
+                    </a>
+
+                </ul>
+            </div>
+
+            <div class="account">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                        </li>
+                    </a>
+
+                    <div class="search" id="searchinput2">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-user" id="user-lap"></i>
+                        </li>
+                    </a>
+                </ul>
+
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <div class="about">
+        <border>
+            <div class="details">
+
+                <br>
+
+                <br>
+                <div class="head">
+                    <figcaption>About Us</figcaption>
+                    <br>
+                    <hr class="hr1">
+
+                    <br>
+                    <h2>
+                        Welcome!
+                    </h2>
+                    <br>
+                    <p class="para1">
+                    <pre>
+                            Welcome to our food restaurant! We are passionate about creating a memorable
+                            dining experience for our guests. Our team of skilled chefs and dedicated 
+                            staff are committed to delivering exceptional service and serving the finest
+                            culinary delights.At our restaurant, we believe that food is more than just 
+                            nourishment; it is a celebration of flavors, textures, and cultures.Thank you 
+                            for choosing our restaurant.</pre>
+                    </p>
+                    <br>
+
+                </div>
+
+            </div>
+        </border>
+        <br>
+        <br><br><br>
+        <div class="vm">
+            <div class="mision">
+                <h3>Mission</h3>
+                <p><i>-Our mission is to ensure the best relationship with our clients, both during and after
+                        their goals have been met.</i></p>
+            </div>
+
+            <div class="vision">
+                <h3>Vision</h3>
+                <p>
+                    <i> -We envision a community where everyone has access to good quality, nutritious food,
+                        understands the consequences of hunger and poor nutrition and is committed to creating a
+                        stronger,
+                        healthier Humboldt County.</i>
+                </p>
+            </div>
+            <br>
+            <br>
+        </div>
+
+        <div class="chefs">
+            <h1>Our <span>experienced</span> Chef's</h1>
+        </div>
+        <br>
+        <br>
+        <hr class="hr2">
+
+
+
+        <!-- A div with container id to hold the card -->
+        <div class="container">
+
+            <!-- A div with card class for the card  -->
+            <div class="card">
+                <img src="images/About us/chef2.png" alt="chef image">
+
+                <!-- A div with card__details class to hold the details in the card  -->
+                <div class="card__details">
+
+                    <!-- Span with tag class for the tag -->
+                    <span class="tag">Head Chef</span>
+
+
+
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Rachael Ray</div>
+
+                    <p class="cardpara">Rachael Domenica Ray is an American cook, television personality,
+                        businesswoman,
+                        and author.</p>
+                    <br>
+
+                    <button class="btn">Read more</button>
+                </div>
+
+
+            </div>
+
+            <!-- A div with card class for the card2  -->
+            <div class="card">
+                <img src="images/About us/chef3.png" alt="chef image">
+
+                <!-- A div with card__details class to hold the details in the card  -->
+                <div class="card__details2">
+
+                    <!-- Span with tag class for the tag -->
+                    <span class="tag">Executive Chef</span>
+
+
+
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Grant Achatz</div>
+
+                    <p class="cardpara">Grant Achatz is an American chef and restaurateur often recognized for his
+                        contributions to molecular gastronomy or progressive cuisine.</p>
+                    <br>
+
+                    <button class="btn">Read more</button>
+                </div>
+
+
+            </div>
+
+            <!-- A div with card class for the card  -->
+            <div class="card">
+                <img src="images/About us/chef4.png" alt="chef image">
+
+                <!-- A div with card__details class to hold the details in the card  -->
+                <div class="card__details">
+
+                    <!-- Span with tag class for the tag -->
+                    <span class="tag">Deputy Chef</span>
+
+
+
+                    <!-- A div with name class for the name of the card -->
+                    <div class="name">Julia Child</div>
+
+                    <p class="cardpara">Julia Carolyn Child was an American cooking teacher, author, and television
+                        personality.</p>
+                    <br>
+
+                    <button class="btn">Read more</button>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="container2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affliate programme</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Online shop</h4>
+                    <ul>
+                        <li><a href="#">appetizer</a></li>
+                        <li><a href="#">Entree</a></li>
+                        <li><a href="#">desserts</a></li>
+                        <li><a href="#">beverages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <br>
+                <div class="copy">
+                    <p>Copyright &copy 2023 FooDzCaFe All Rights Reserved</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src=""></script>
+</body>
+
+</html>

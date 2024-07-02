@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>FooDzCaFe | Food Menu</title>
+
+
+    <!--=============== internal Css =======================-->
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+        }
+
+        .headerbar {
+            display: none;
+        }
+
+        .searchicon {
+            display: block;
+
+        }
+
+        .logo img {
+            width: 120px;
+            height: 100px;
+
+        }
+
+        .bar {
+            display: none;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 7vw;
+            background-color: rgb(248, 232, 217);
+            border-bottom: 2px solid rgb(252, 196, 124);
+
+        }
+
+        .header ul {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .header ul li:hover {
+            color: rgb(253, 57, 8);
+
+        }
+
+        .nav ul li {
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+
+        .account {
+            float: 0.1
+        }
+
+        .account ul {
+            display: flex;
+            justify-content: end;
+        }
+
+        .account ul li {
+            padding: 0 15px;
+            font-size: 18px;
+        }
+
+        .bar i:hover {
+            color: rgb(253, 57, 8);
+        }
+
+        .search {
+            display: none;
+            width: 200px;
+            justify-content: center;
+        }
+
+        .search input {
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 5px;
+        }
+
+
+
+        .srchicon {
+            background-color: rgb(255, 210, 210);
+            display: block;
+            padding: 4px 5px;
+            cursor: pointer;
+        }
+
+        body {
+            background-color: rgb(248, 232, 217);
+        }
+
+
+        .container {
+            background-image: url(images/foodsmenu/bg1.jpg);
+            background-repeat: no-repeat;
+            width: 90%px;
+            padding: 0px 20px 0px 20px;
+            margin: 60px 120px 110px 120px;
+            height: 900px;
+            border-radius: 50px 50px 50px 50px;
+            border: px solid rgb(253, 124, 124);
+            box-shadow: 0px 15px 15px 10px rgb(108, 104, 104);
+
+
+        }
+
+        h2 {
+            padding-top: 40px;
+            color: gray;
+            font-weight: normal;
+            font-size: 35px;
+            position: relative;
+            margin: 40px;
+            text-align: center;
+        }
+
+        h2 span {
+            color: rgb(82, 82, 82);
+        }
+
+        h2::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: rgb(253, 124, 124);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: animate 4s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                width: 100px;
+            }
+
+            50% {
+                width: 200px;
+            }
+
+            100% {
+                width: 100px;
+            }
+        }
+
+        .foods1 {
+
+            padding: 30px 10px 10px 10px;
+            margin: 35px 80px 20px 20px;
+            text-align: center;
+            background-color: rgb(231, 168, 108);
+            border: 0px solid rgb(0, 0, 0);
+            padding-top: 13px;
+            padding-bottom: 115px;
+            border-radius: 130px;
+            width: 550px;
+            float: right;
+            height: 40px;
+            box-shadow: 0 2px 20px rgb(150, 71, 71);
+            transition: 400ms;
+            animation: slideInLeft 1.3s ease-in-out 0s 1 normal none;
+
+
+
+
+        }
+
+        .foods1:hover {
+
+            transform: scale(1.04);
+            transform: scale(1.09);
+        }
+
+        .foods2 {
+
+            padding: 30px 10px 10px 10px;
+            margin: 35px 80px 20px 20px;
+            text-align: center;
+            background-color: rgb(231, 168, 108);
+            border: 0px solid rgb(0, 0, 0);
+            padding-top: 13px;
+            padding-bottom: 115px;
+            border-radius: 130px;
+            width: 550px;
+            float: right;
+            height: 40px;
+            box-shadow: 0 2px 20px rgb(150, 71, 71);
+            transition: 400ms;
+            animation: slideInLeft 1.4s ease-in-out 0s 1 normal none;
+
+
+
+        }
+
+
+        .foods2:hover {
+
+            transform: scale(1.04);
+            transform: scale(1.09);
+        }
+
+        .foods3 {
+
+            padding: 30px 10px 10px 10px;
+            margin: 35px 80px 20px 20px;
+            text-align: center;
+            background-color: rgb(231, 168, 108);
+            border: 0px solid rgb(0, 0, 0);
+            padding-top: 13px;
+            padding-bottom: 115px;
+            border-radius: 130px;
+            width: 550px;
+            float: right;
+            height: 40px;
+            box-shadow: 0 2px 20px rgb(150, 71, 71);
+            transition: 400ms;
+            animation: slideInLeft 1.5s ease-in-out 0s 1 normal none;
+
+
+        }
+
+
+        .foods3:hover {
+
+            transform: scale(1.04);
+            transform: scale(1.09);
+        }
+
+
+        .foods4 {
+
+            padding: 30px 10px 10px 10px;
+            margin: 35px 80px 20px 20px;
+            text-align: center;
+            background-color: rgb(231, 168, 108);
+            border: 0px solid rgb(0, 0, 0);
+            padding-top: 13px;
+            padding-bottom: 115px;
+            border-radius: 130px;
+            width: 550px;
+            float: right;
+            height: 40px;
+            box-shadow: 0 2px 20px rgb(150, 71, 71);
+            transition: 400ms;
+            animation: slideInLeft 1.6s ease-in-out 0s 1 normal none;
+
+
+        }
+
+        .foods4:hover {
+
+            transform: scale(1.04);
+            transform: scale(1.09);
+        }
+
+
+
+
+
+        .foods1:hover {
+            color: white;
+            background-color: rgb(222, 132, 99);
+            box-shadow: 0 10px 15px rgb(179, 91, 56);
+
+        }
+
+        .foods2:hover {
+            color: white;
+            background-color: rgb(222, 132, 99);
+            box-shadow: 0 10px 15px rgb(179, 91, 56);
+
+        }
+
+        .foods3:hover {
+            color: white;
+            background-color: rgb(222, 132, 99);
+            box-shadow: 0 10px 15px rgb(179, 91, 56);
+
+        }
+
+        .foods4:hover {
+            color: white;
+            background-color: rgb(222, 132, 99);
+            box-shadow: 0 10px 15px rgb(179, 91, 56);
+
+        }
+
+        .item-1 img {
+            float: left;
+
+            border-radius: 50%;
+
+            width: 100px;
+            margin: -1px 20px 0px 10px;
+
+
+            text-decoration: none;
+            font-family: AriaL;
+            text-align: center;
+        }
+
+        .item-2 {
+            float: left;
+            margin-top: 4px;
+            margin-left: 80px;
+            font-size: 25px;
+            width: 100px;
+
+
+            text-decoration: none;
+            font-family: AriaL;
+            text-align: center;
+
+        }
+
+
+        .item-3 {
+            float: left;
+            margin-top: 30px;
+            margin-left: 100px;
+
+            width: 100px;
+
+
+
+            font-family: AriaL;
+            text-align: center;
+        }
+
+        .item-3 i {
+            color: red;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-250px);
+            }
+
+            to {
+                transform: translateX(0);
+
+            }
+
+        }
+
+        .container {
+
+
+            animation: slideInLeft 1.1s ease-in-out 0s 1 normal none;
+        }
+
+        .container2 {
+            max-width: 1170px;
+
+            margin: auto;
+
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+
+        .footer {
+            background-color: #35302d;
+            padding: 70px 0;
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            font-weight: 500;
+            position: relative;
+
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: rgb(253, 77, 8);
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-left: 10px;
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        .copy p {
+            color: #ffffff;
+
+
+
+        }
+
+        .copy {
+            width: 100%;
+            margin-top: 30px;
+            background-color: #322813;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body style="background-color:rgb(248, 232, 217);">
+    <header>
+
+        <div class="header">
+
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="nav">
+                    <ul>
+                        <a href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="about.html">
+                            <li>About Us</li>
+                        </a>
+                        <a href="">
+                            <li>Food Menu</li>
+                        </a>
+
+                        <a href="">
+                            <li>Contact Us</li>
+                        </a>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/foodsmenu/official logo3.png" alt="">
+                </a>
+
+            </div>
+
+            <div class="bar">
+                <i class=" fa-solid fa-bars "> </i>
+                <i class="  fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="about.html">
+                        <li>About us</li>
+                    </a>
+                    <a href="">
+                        <li>Food Menu</li>
+                    </a>
+
+                    <a href="contact.html">
+                        <li>Contact us</li>
+                    </a>
+                    <a href="review.html">
+                        <li>Reviews</li>
+                    </a>
+
+                </ul>
+            </div>
+
+            <div class="account">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                        </li>
+                    </a>
+
+                    <div class="search" id="searchinput2">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-user" id="user-lap"></i>
+                        </li>
+                    </a>
+                </ul>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!--First-->
+
+    <div class="container">
+        <h2> <span>Food Menu </span>Categories</h2>
+
+
+
+        <div class="foods1">
+            <a href="appetizer.html">
+                <div class="item-1"><img src="images/foodsmenu/f1.png" alt=""></div>
+            </a>
+
+            <a href="appetizer.html">
+                <div class="item-2"><br>
+                    <p>Appetizer </p>
+                </div>
+            </a>
+
+
+
+            <a href="appetizer.html">
+                <div class="item-3">
+                    <i class='fas fa-angle-right' style='font-size:48px;color:rgb(248, 117, 61)'></i>
+                </div>
+            </a>
+
+
+        </div>
+
+
+
+        <!--Second-->
+        <div class="foods2">
+            <a href="entree.html">
+                <div class="item-1"><img src="images/foodsmenu/f2.png" alt=""></div>
+
+            </a>
+            <a href="entree.html">
+                <div class="item-2"><br>
+                    <p>Entree </p>
+                </div>
+            </a>
+
+
+            <a href="entree.html">
+                <div class="item-3">
+
+                    <i class='fas fa-angle-right' style='font-size:48px;color:rgb(248, 117, 61)'></i>
+
+                </div>
+            </a>
+        </div>
+
+        <!--Third-->
+        <div class="foods3">
+            <a href="desserts.html">
+                <div class="item-1"><img src="images/foodsmenu/f6.png" alt=""></div>
+            </a>
+
+            <a href="desserts.html">
+                <div class="item-2"><br>
+                    <p>Desserts </p>
+                </div>
+            </a>
+
+
+
+            <a href="desserts.html">
+                <div class="item-3">
+                    <i class='fas fa-angle-right' style='font-size:48px;color:rgb(248, 117, 61)'></i>
+                </div>
+            </a>
+
+
+        </div>
+
+
+        <!--Fourth-->
+        <div class="foods4">
+            <a href="beverage.html">
+                <div class="item-1"><img src="images/foodsmenu/f5.png" alt=""></div>
+            </a>
+
+            <a href="beverage.html">
+                <div class="item-2"><br>
+                    <p>Beverages</p>
+                </div>
+            </a>
+
+
+            <a href="beverage.html">
+                <div class="item-3">
+                    <i class='fas fa-angle-right' style='font-size:48px;color:rgb(248, 117, 61)'></i>
+                </div>
+            </a>
+
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affliate programme</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Online shop</h4>
+                    <ul>
+                        <li><a href="#">appetizer</a></li>
+                        <li><a href="#">Entree</a></li>
+                        <li><a href="#">desserts</a></li>
+                        <li><a href="#">beverages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <br>
+                <div class="copy">
+                    <p>Copyright &copy 2023 FooDzCaFe All Rights Reserved</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

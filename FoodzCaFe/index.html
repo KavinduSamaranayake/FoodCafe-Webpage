@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FooDzCaFe | Home </title>
+
+
+    <!--=============== internal Css =======================-->
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Quicksand:wght@500&display=swap');
+        /* Home Page CSS Start */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .headerbar {
+            display: none;
+        }
+
+        .searchicon {
+            display: block;
+
+        }
+
+        .logo img {
+            width: 120px;
+            height: 100px;
+        }
+
+        .bar {
+            display: none;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 7vw;
+            background-color: rgb(248, 232, 217);
+            border-bottom: 2px solid rgb(252, 196, 124);
+            box-shadow: 0 2px 20px rgb(253, 124, 124);
+        }
+
+        .header ul {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .header ul li:hover {
+            color: rgb(253, 57, 8);
+
+        }
+
+        .nav ul li {
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .account {
+            float: 0.1
+        }
+
+        .account ul {
+            display: flex;
+            justify-content: end;
+        }
+
+        .account ul li {
+            padding: 0 15px;
+            font-size: 18px;
+        }
+
+        .bar i:hover {
+            color: rgb(253, 57, 8);
+        }
+
+        .search {
+            display: none;
+            width: 200px;
+            justify-content: center;
+        }
+
+        .search input {
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .srchicon {
+            background-color: rgb(255, 210, 210);
+            display: block;
+            padding: 4px 5px;
+            cursor: pointer;
+        }
+
+        /******Nav Bar End********/
+
+
+        /*******Home Start********/
+        .home {
+            background-color: rgb(248, 232, 217);
+            padding: 0 7vw;
+        }
+
+        .main_slide {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+
+        }
+
+        .main_slide img {
+            padding-top: 10px;
+            width: 615px;
+            transform: translateY(0px);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(25px);
+
+            }
+
+            100% {
+                transform: translateY(0px);
+
+            }
+
+        }
+
+
+
+
+
+        .main_slide div:nth-child(2) {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+
+        }
+
+        .main_slide div:nth-child(1) {
+            padding-top: 20px;
+            flex: 1;
+            font-size: 34px;
+
+        }
+
+        .main_slide div:nth-child(1) p {
+            font-size: 17px;
+            padding: 20px 0;
+
+
+
+        }
+
+        .main_slide div:nth-child(1) span {
+            color: rgb(253, 57, 8);
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-color: rgb(253, 176, 34);
+        }
+
+
+
+
+
+
+        .red_btn {
+            cursor: pointer;
+            margin-top: 20px;
+            padding: 0px 6px 0px 6px;
+            width: 170px;
+            font-weight: bold;
+            color: aliceblue;
+            line-height: 50px;
+            background-color: rgb(253, 77, 8);
+            border-radius: 5px;
+            border: 1px solid rgb(253, 77, 8);
+            box-shadow: 0 10px 15px rgb(250, 120, 69);
+            transition: all 0.2s;
+
+
+
+        }
+
+        .red_btn {
+            animation: slideInLeft 1.4s ease-in-out 0s 1 normal none;
+            transition: 400ms;
+        }
+
+        .red_btn i {
+            color: white;
+            transition: all 0.2s;
+
+        }
+
+        .red_btn:hover {
+            background-color: white;
+            box-shadow: 0 2px 15px rgb(250, 240, 69);
+            border: 1px solid rgb(253, 77, 8);
+            color: rgb(253, 77, 8);
+        }
+
+        .red_btn:hover i {
+            color: rgb(253, 77, 8);
+        }
+
+
+        .red_btn1 {
+            cursor: pointer;
+            margin-top: 20px;
+            padding: 0px 6px 0px 6px;
+            width: 170px;
+            font-weight: bold;
+            color: aliceblue;
+            line-height: 50px;
+            background-color: rgb(253, 77, 8);
+            border-radius: 5px;
+            border: 1px solid rgb(253, 77, 8);
+            box-shadow: 0 10px 15px rgb(250, 120, 69);
+            transition: all 0.2s;
+
+
+
+        }
+
+
+        .red_btn1 i {
+            color: white;
+            transition: all 0.2s;
+
+        }
+
+        .red_btn1:hover {
+            background-color: white;
+            box-shadow: 0 2px 15px rgb(250, 240, 69);
+            border: 1px solid rgb(253, 77, 8);
+            color: rgb(253, 77, 8);
+        }
+
+        .red_btn1:hover i {
+            color: rgb(253, 77, 8);
+        }
+
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-300px);
+            }
+
+            to {
+                transform: translateX(0);
+
+            }
+
+        }
+
+        .main_slide div p {
+            animation: slideInLeft 1.5s ease-in-out 0s 1 normal none;
+            transition: 400ms;
+        }
+
+        .main_slide div h1 {
+
+            animation: slideInLeft 1.2s ease-in-out 0s 1 normal none;
+            transition: 400ms;
+        }
+
+
+
+
+
+        .food-items {
+            margin: 70px 0;
+            padding: 20px 0;
+            background-color: white;
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 260px;
+            padding: 27px;
+            text-align: center;
+        }
+
+        .item div {
+            height: 280px;
+        }
+
+        .item img {
+            width: 140px;
+            margin-bottom: 13px;
+        }
+
+        .item p {
+            font-size: 12px;
+            margin-top: 13px;
+            margin-bottom: 15px;
+        }
+
+        .white_btn {
+            cursor: pointer;
+            margin-top: 20px;
+            width: 160px;
+            font-weight: bold;
+            color: rgb(253, 77, 8);
+            line-height: 50px;
+            border: 1px solid rgb(253, 77, 8);
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgb(250, 120, 69);
+            transition: all 0.2s;
+
+        }
+
+        .white_btn:hover {
+            color: white;
+            background-color: rgb(253, 77, 8);
+            box-shadow: 0 10px 15px rgb(250, 120, 69);
+        }
+
+        .item .red_btn1,
+        .item .white_btn {
+            width: 120px;
+            line-height: 35px;
+        }
+
+        .main_slide2 {
+            margin: 80px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .foodimg {
+            flex: 0.5;
+
+        }
+
+        .foodimg img {
+            max-width: 550px;
+            width: 45vw;
+        }
+
+
+        .question {
+            flex: 0.5;
+            flex-direction: column;
+            margin-left: 40px;
+        }
+
+        .question img {
+            width: 700px;
+        }
+
+        .question h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .q-ans {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 0;
+            cursor: pointer;
+        }
+
+        .q-ans img {
+            width: 85px;
+        }
+
+        .q-ans div:first-child {
+            padding: 8px;
+            border-radius: 50%;
+            height: 60px;
+            text-align: center;
+            background-color: white;
+            margin-right: 20px;
+
+        }
+
+        .q-ans div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .q-ans div:nth-child(2) {
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        .main_slide3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 0;
+        }
+
+        .main_slide3 .fav-head {
+            text-align: center;
+            width: 450px;
+            margin-bottom: 30px;
+        }
+
+        .main_slide3 .fav-head h3 {
+            font-size: 33px;
+            padding: 25px 0;
+
+        }
+
+
+
+
+        .main_slide3 .fav-head p {
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .main_slide3 .fav-food {
+            margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 80%;
+        }
+
+        .main_slide3 .fav-food h3 {
+            margin-top: -160px;
+        }
+
+        .main_slide3 .fav-food .item {
+            background-color: white;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(119, 119, 119, 0.438);
+            width: 195px;
+            padding: 15px;
+            padding-top: 12px;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 5px;
+            transition: 400ms;
+
+        }
+
+        .main_slide3 .fav-food .item:hover {
+            transform: scale(1.05);
+        }
+
+
+
+        .main_slide3 .fav-food .item div {
+            height: 155px;
+            margin-bottom: 135px;
+        }
+
+        .main_slide3 .fav-food .item img {
+            width: 156px;
+            margin-bottom: 10px;
+        }
+
+        .main_slide3 .fav-price {
+            color: red;
+            font-weight: bold;
+            font-size: 15px;
+
+        }
+
+        .main_slide3 .dsgn {
+            background-color: rgb(255, 214, 176);
+            height: 50%;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            border-radius: 10px;
+        }
+
+        .main_slide4 {
+            margin-top: 270px;
+            display: flex;
+            flex-wrap: wrap-reverse;
+
+        }
+
+
+        .main_slide4 .chef-feed {
+            flex: 0.5;
+            margin-top: 30px;
+        }
+
+        .main_slide4 .chef {
+            flex: 0.5;
+            text-align: right;
+        }
+
+        .main_slide4 .chef img {
+            margin-top: -130px;
+            width: 50vw;
+            max-width: 490px;
+        }
+
+        .main_slide4 .chef-feed h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .main_slide4 .chef-feed p {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .main_slide4 .chef-detail {
+            margin-top: 20px;
+            display: flex;
+            margin: 25px 0;
+            align-items: center;
+
+        }
+
+        .main_slide4 .chef-detail img {
+            width: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 4px solid white;
+        }
+
+        .main_slide4 .chef-detail h6 {
+            font-size: 14px;
+        }
+
+        .main_slide4 .chef-detail p {
+            font-size: 11px;
+            color: red;
+
+        }
+
+        .main_slide4 .chef-vic {
+            display: flex;
+            align-items: center;
+            padding: 25px 20px;
+            background-color: rgb(255, 219, 185);
+            border-radius: 0 100px 0 0;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .main_slide4 .chef-vic div {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            flex: 0.5;
+            height: 27px;
+            overflow: hidden;
+        }
+
+        .main_slide4 .chef-vic div i,
+        .main_slide4 .chef-vic div h4 {
+            font-size: 27px;
+            margin-right: 8px;
+        }
+
+        .main_slide4 .chef-vic div h4 {
+            color: red;
+        }
+
+        .main_slide4 .chef-vic div p {
+            font-size: 11px;
+            padding-top: 8px;
+            line-height: 13px;
+        }
+
+        .letter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 0;
+        }
+
+        .letter-head {
+            flex: 0.5;
+        }
+
+        .letter-head h2 {
+            font-size: 30px;
+        }
+
+        .letter-head span {
+            color: red;
+        }
+
+        .letter-input {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex: 0.5;
+        }
+
+        .letter-input div {
+            width: 70%;
+            display: flex;
+            align-items: center;
+            background-color: rgb(255, 219, 185);
+        }
+
+        .letter-input input {
+            font-size: 15px;
+            padding: 10px;
+            outline: none;
+            width: 100%;
+            border: none;
+            background-color: rgb(255, 219, 185);
+        }
+
+        .letter-input .red_btn {
+            margin: 0;
+            font-size: 18px;
+            box-shadow: none;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .container {
+            max-width: 1170px;
+
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+
+        .footer {
+            background-color: #35302d;
+            padding: 70px 0;
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            font-weight: 500;
+            position: relative;
+
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: rgb(253, 77, 8);
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-left: 10px;
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        .copy p {
+            color: #ffffff;
+
+
+
+        }
+
+        .copy {
+            width: 100%;
+            margin-top: 30px;
+            background-color: #322813;
+            text-align: center;
+        }
+
+        /*footer responsive*/
+        @media (max-width:767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width:574px) {
+            .footer-col {
+                width: 100%;
+
+            }
+        }
+
+
+
+        @media only screen and (max-width: 768px) {
+
+            .header .nav,
+            .header .account {
+                display: none;
+            }
+
+            .search {
+                width: 60vw;
+
+            }
+
+            .bar {
+                display: block;
+                cursor: pointer;
+
+            }
+
+            .headerbar {
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                bottom: 0;
+                right: -100%;
+                transition: all 0.5s;
+                background-color: rgb(252, 231, 216);
+
+            }
+
+            .headerbar .account,
+            .headerbar .nav {
+                display: block;
+                font-size: 18px;
+
+            }
+
+            .bar .fa-xmark {
+                display: none;
+                top: 20px;
+                right: 5w;
+                position: absolute;
+                font-size: 25px;
+
+            }
+
+            .headerbar .nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .headerbar .nav li {
+                width: 96vw;
+                margin: 10px 0;
+                padding: 15px 30px;
+                box-shadow: 0 2px 15px rgb(252, 193, 169);
+                font-size: 15px;
+                margin-top: 5px;
+
+            }
+
+            .headerbar .account {
+                line-height: 40px;
+                margin-top: 60px;
+                background-color: rgb(252, 210, 182);
+                padding: 15px;
+
+            }
+
+            .headerbar .account ul {
+                justify-content: space-between;
+            }
+
+            .foodimg {
+                flex: 1;
+                text-align: center;
+                margin-bottom: 20px;
+
+            }
+
+            .foodimg img {
+                width: 70vw;
+
+            }
+
+            .question {
+                flex: 1;
+                margin-top: 30px;
+            }
+
+            .question h2 {
+                font-size: 25px;
+            }
+
+            .q-ans div:nth-child(2) {
+                font-size: 11px;
+            }
+
+            .main_slide3 {
+                margin-top: 100px;
+            }
+
+            .main_slide3 .dsgn {
+                height: 60%;
+            }
+
+            .main_slide3 .fav-head {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .main_slide4 {
+                margin-top: 150px;
+            }
+
+            .main_slide4 .chef-feed {
+                flex: 1;
+            }
+
+            .main_slide4 .chef {
+                flex: 1;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .main_slide4 .chef img {
+                width: 80vw;
+            }
+
+            .letter-head h2 {
+                font-size: 20px;
+            }
+
+            .letter-input input {
+                font-size: 12px;
+                padding: 15px;
+                width: 50vw;
+            }
+
+            .letter-input .red_btn {
+                line-height: 40px;
+                width: 120px;
+                font-size: 12px;
+
+            }
+
+            .footer .footer-1 div {
+                margin: 0;
+            }
+
+            .footer div {
+                margin-bottom: 40px;
+            }
+
+
+
+        }
+
+        @media only screen and (max-width: 550px) {
+
+            .main_slide div:nth-child(1) {
+                font-size: 18px;
+            }
+
+            .main_slide div:nth-child(1) p {
+                padding-top: 5px;
+                margin: 10px 0;
+                font-size: 12px;
+            }
+
+            .red_btn {
+                margin-top: 10px;
+                width: 120px;
+                line-height: 30px;
+                font-size: 12px;
+                padding: 0 10px;
+            }
+
+            .main_slide div:nth-child(1)span {
+                text-underline-offset: 5px;
+            }
+
+            .main_slide div:nth-child(2) img {
+                width: 75vw;
+            }
+
+            .main_slide3 .fav-head {
+                width: 100%;
+
+            }
+
+
+            .main_slide3 .fav-head h3 {
+                font-size: 25px;
+            }
+
+            .main_slide3 .fav-head p {
+                font-size: 11px;
+            }
+
+            .main_slide3 .dsgn {
+                display: none;
+            }
+
+            .main_slide4 .chef-vic div p {
+                display: none;
+
+            }
+
+            .letter {
+                justify-content: center;
+
+            }
+
+            .letter-head {
+                flex: 1;
+                text-align: center;
+            }
+
+            .footer div:last-child {
+                margin-bottom: 0;
+
+            }
+
+            .footer {
+                padding-bottom: 25px;
+            }
+
+            .footer-2 h2 {
+                font-size: 20px;
+            }
+
+
+
+
+        }
+
+        /* Home Page END */
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+
+        <div class="header">
+
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="nav">
+                    <ul>
+                        <a href="">
+                            <li>Home</li>
+                        </a>
+                        <a href="about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="food_menu.html">
+                            <li>Food Menu</li>
+                        </a>
+
+                        <a href="contact.html">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/official logo3.png" alt="">
+                </a>
+
+            </div>
+
+            <div class="bar">
+                <i class=" fa-solid fa-bars "> </i>
+                <i class="  fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <a href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href="about.html">
+                        <li>About us</li>
+                    </a>
+                    <a href="food_menu.html">
+                        <li>Food Menu</li>
+                    </a>
+
+                    <a href="contact.html">
+                        <li>Contact us</li>
+                    </a>
+                    <a href="review.html">
+                        <li>Reviews</li>
+                    </a>
+
+                </ul>
+            </div>
+
+            <div class="account">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                        </li>
+                    </a>
+
+                    <div class="search" id="searchinput2">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-user" id="user-lap"></i>
+                        </li>
+                    </a>
+                </ul>
+
+            </div>
+
+        </div>
+    </header>
+
+    <div class="home">
+        <div class="main_slide">
+
+            <div>
+                <h1>Enjoy <span> Delicious Food </span> in Your Healthy Life</h1>
+                <p>Food can help improve our mood, but it’s not just because of how it helps fuel our bodies, but
+                    for
+                    the way it helps fuel our souls, our hearts, and our minds.</p>
+                <a href="login.html">
+                    <button class="red_btn">Visit Now / Login <i class="fa-solid fa-arrow-right-long"></i></button>
+                </a>
+            </div>
+
+            <div>
+                <img src="images/foodplate3.png" alt="">
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="food-items">
+            <div class="item">
+                <div>
+                    <img src="images/fooditem6.png" alt="">
+                    <h3>Chicken Burger</h3>
+                    <p>Ground chicken, low calorie, avocado, fresh spinach, olive oil</p>
+                    <button class="white_btn">See Menu</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="images/fooditem6.png" alt="">
+                    <h3>Roast Chicken</h3>
+                    <p>Roast chicken Barbecue chicken Roasting Chicken meat, roast </p>
+                    <button class="red_btn1">See Menu</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="images/fooditem2.png" alt="">
+                    <h3>Ice cream Fried egg</h3>
+                    <p>Ice cream Fried egg Toast Full breakfast Bacon, egg and cheese sandwich, sandwich,breakfast</p>
+                    <button class="white_btn">See Menu</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="main_slide2">
+            <div class="foodimg">
+                <img src="images/plate1.png" alt="">
+            </div>
+
+            <div class="question">
+                <div>
+                    <h2>Why People Choose Us?</h2>
+                </div>
+                <div>
+                    <div class="q-ans">
+                        <div>
+                            <img src="images/plate2.png" alt="">
+                        </div>
+                        <div>
+                            <h4>Quality of Service</h4>
+                            <p>Good friendly service </p>
+                        </div>
+                    </div>
+
+                    <div class="q-ans">
+                        <div>
+                            <img src="images/plate5.png" alt="">
+                        </div>
+                        <div>
+                            <h4>Quality of Food, Ambiance </h4>
+                            <p>The term standard is defined, by the World Trade Organisation (WTO) on the technical
+                                barriers to trade (TBT) agreement.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="q-ans">
+                        <div>
+                            <img src="images/plate4.png" alt="">
+                        </div>
+                        <div>
+                            <h4>Value of Money</h4>
+                            <p>We strive to provide maximum satisfaction for your money.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_slide3">
+            <div class="fav-head">
+                <h3>Our Popular Food Items</h3>
+                <p>"There is no love sincerer than the love of food.." </p>
+
+            </div>
+
+            <div class="fav-food">
+                <div class="item">
+                    <div>
+                        <img src="images/plate8.png" alt="">
+                    </div>
+                    <h3>Fries and Grilled Meat</h3>
+                    <p>fries and grilled meat on white ceramic plate, Hamburger French fries Pepper steak, Food Plate
+                    </p>
+                    <p class="fav-price">$4.90</p>
+
+                </div>
+
+                <div class="item">
+                    <div>
+                        <img src="images/plate12.png" alt="">
+                    </div>
+                    <h3>pepperoni Italian pizza </h3>
+                    <p>pepperoni pizza, Margarita Pizza Margherita Italian cuisine Tomato, pizza.
+                    </p>
+                    <p class="fav-price">$5.85</p>
+
+                </div>
+
+                <div class="item">
+                    <div>
+                        <img src="images/plate4.png" alt="">
+                    </div>
+                    <h3>Bangers and mash</h3>
+                    <p>traditional British dish consisting of sausages and mashed potato.
+                    </p>
+                    <p class="fav-price">$2.99</p>
+
+                </div>
+
+                <div class="item">
+                    <div>
+                        <img src="images/fooditem5.png" alt="">
+                    </div>
+                    <h3>Fried Chicken Recipe</h3>
+                    <p>one of the most loved meats around the world, and here is a dish that never fails.
+                    </p>
+                    <p class="fav-price">$3.40</p>
+
+                </div>
+            </div>
+            <div class="dsgn"></div>
+        </div>
+
+        <div class="main_slide4">
+            <div class="chef-feed">
+                <h2>Customer <span style="color:red">Feedback</span></h2>
+                <p> To get our customers to share their honest opinions, we need to have the right approach to
+                    collecting feedback.Collecting customer feedback brings numerous benefits, from higher conversion
+                    rates to more devoted users. But to enjoy these advantages, we need to start asking our customers
+                    the right questions.
+
+                    We know that can be easier said than done.</p>
+                <div class="chef-detail">
+                    <div>
+                        <img src="images/logo6.png" alt="">
+                    </div>
+                    <div>
+                        <h6>Kavindu Dilshan</h6>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
+
+                <div class="chef-vic">
+                    <div>
+                        <i class="fa-solid fa-hand-peace"></i>
+                        <h4>68 </h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-trophy"></i>
+                        <h4>956</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="chef">
+                <img src="images/chef2.png" alt="">
+            </div>
+        </div>
+
+        <div class="letter">
+            <div class="letter-head">
+                <h2>Subcribe <span>Newsletter</span></h2>
+            </div>
+            <div class="letter-input">
+                <div>
+                    <input type="email" placeholder="Example.com">
+                </div>
+                <button class="red_btn">Subcribe</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affliate programme</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Online shop</h4>
+                    <ul>
+                        <li><a href="#">appetizer</a></li>
+                        <li><a href="#">Entree</a></li>
+                        <li><a href="#">desserts</a></li>
+                        <li><a href="#">beverages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <br>
+                <div class="copy">
+                    <p>Copyright &copy 2023 FooDzCaFe All Rights Reserved</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <!--===================== Start Java Sript =====================-->
+    <script>
+
+        const searchicon1 = document.querySelector('#searchicon1');
+        const srchicon1 = document.querySelector('#srchicon1');
+        const search1 = document.querySelector('#searchinput1');
+
+        searchicon1.addEventListener('click', function () {
+            search1.style.display = 'flex';
+            searchicon1.style.display = 'none';
+        })
+
+        const searchicon2 = document.querySelector('#searchicon2');
+        const srchicon2 = document.querySelector('#srchicon2');
+        const search2 = document.querySelector('#searchinput2');
+
+        searchicon2.addEventListener('click', function () {
+            search2.style.display = 'flex';
+            searchicon2.style.display = 'none';
+        })
+
+        const bar = document.querySelector('.fa-bars');
+        const cross = document.querySelector('#hdcross');
+        const headerbar = document.querySelector('.headerbar');
+
+        bar.addEventListener('click', function () {
+            setTimeout(() => {
+                cross.style.display = 'block';
+            }, 200);
+            headerbar.style.right = '0%';
+        })
+
+        cross.addEventListener('click', function () {
+            cross.style.display = 'none';
+            headerbar.style.right = '-100%';
+
+        })
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
